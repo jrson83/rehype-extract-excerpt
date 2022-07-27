@@ -40,6 +40,7 @@
     "watch": "tsc --watch",
     "type:check": "tsc --noEmit",
     "test": "vitest",
+    "test:run": "vitest run",
     "coverage": "vitest run --coverage",
     "prepare": "husky install"
   },
