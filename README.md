@@ -17,7 +17,7 @@
 
 ## What is this?
 
-This package is a [unified][] ([rehype][]) plugin to extract the first paragraph of a document.
+This package is a [unified](https://github.com/unifiedjs/unified) ([rehype](https://github.com/rehypejs/rehype)) plugin to extract the first paragraph of a document.
 
 **unified** is a project that transforms content with abstract syntax trees
 (ASTs).
