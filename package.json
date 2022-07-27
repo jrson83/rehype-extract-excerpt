@@ -60,11 +60,6 @@
     "unified": "^10.1.2",
     "vitest": "^0.18.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test && npm run pretty-quick --staged"
-    }
-  },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   }
