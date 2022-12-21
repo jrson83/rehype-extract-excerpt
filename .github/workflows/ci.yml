@@ -1,0 +1,24 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency: build
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Set up NodeJS
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: '17'
+      - name: Test
+        run: |
+          npm install
+          npm run build
+          npm run test
