@@ -1,24 +1,36 @@
-name: CI
+name: Node.js CI
+
 on:
   pull_request:
+    branches: [main]
   push:
-    branches:
-      - main
+    branches: [main]
 
-concurrency: build
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
 
 jobs:
-  test:
+  ci:
+    name: Node.js CI
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-      - name: Set up NodeJS
-        uses: actions/setup-node@v3.6.0
+      - name: Checkout code
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
+
+      - name: Setup Node environment
+        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
         with:
-          node-version: '17'
-      - name: Test
-        run: |
-          npm install
-          npm run build
-          npm run test
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build
+        run: npm run build
+
+      - name: Run test
+        run: npm run test
