@@ -32,6 +32,21 @@ const rehypeExtractExcerpt: Plugin<
 > = (userOptions?: RehypeExtractExcerptOptions) => {
   const options = { ...defaults, ...userOptions }
 
+  function truncateExcerpt(
+    str: string,
+    maxLength: number,
+    ellipsis: string,
+    wordBoundaries: boolean
+  ): string {
+    if (str.length > maxLength) {
+      if (wordBoundaries) {
+        return `${str.slice(0, str.lastIndexOf(' ', maxLength - 1))}${ellipsis}`
+      }
+      return `${str.slice(0, maxLength)}${ellipsis}`
+    }
+    return str
+  }
+
   return (tree: Root, vfile: VFileWithOutput<unknown>) => {
     const excerpt: string[] = []
 
@@ -54,21 +69,6 @@ const rehypeExtractExcerpt: Plugin<
 
     vfile.data[options.name!] = excerpt[0]
   }
-}
-
-function truncateExcerpt(
-  str: string,
-  maxLength: number,
-  ellipsis: string,
-  wordBoundaries: boolean
-): string {
-  if (str.length > maxLength) {
-    if (wordBoundaries) {
-      return `${str.slice(0, str.lastIndexOf(' ', maxLength - 1))}${ellipsis}`
-    }
-    return `${str.slice(0, maxLength)}${ellipsis}`
-  }
-  return str
 }
 
 export default rehypeExtractExcerpt
