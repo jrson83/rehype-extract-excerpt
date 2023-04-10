@@ -43,7 +43,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "type:check": "tsc --noEmit",
-    "publish": "sparkee publish",
+    "pub": "sparkee publish",
     "test": "vitest",
     "test:run": "vitest run",
     "coverage": "vitest run --coverage",
