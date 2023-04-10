@@ -43,6 +43,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "type:check": "tsc --noEmit",
+    "publish": "sparkee publish",
     "test": "vitest",
     "test:run": "vitest run",
     "coverage": "vitest run --coverage",
@@ -61,6 +62,7 @@
     "rehype-stringify": "^9.0.3",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
+    "sparkee": "^1.2.1",
     "typescript": "^5.0.4",
     "unified": "^10.1.2",
     "vitest": "^0.30.0"
