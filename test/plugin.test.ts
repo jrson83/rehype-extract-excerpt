@@ -120,3 +120,15 @@ it('should attach excerpt to vfile.data.excerpt without truncating word boundari
     }
   `)
 })
+
+it('should extract excerpt from a custom HTML tag', async () => {
+  const { data } = await createProcessor({ tagName: 'h1' }).process(
+    await fs.readFile(path('markdown.md'), { encoding: 'utf8' })
+  )
+
+  expect(data).toMatchInlineSnapshot(`
+    {
+      "excerpt": "Test heading h1",
+    }
+  `)
+})
