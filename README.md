@@ -123,6 +123,10 @@ The ellipsis to add to the excerpt. Use `''` to disable. (`string`, default: `'.
 
 Truncate the excerpt at word boundary. (`boolean`, default: `true`).
 
+##### `options.tagName`
+
+The HTML tag name to extract excerpt from. (`string`, default: `'p'`).
+
 ## Types
 
 This package is fully typed with [TypeScript](https://www.typescriptlang.org/).
