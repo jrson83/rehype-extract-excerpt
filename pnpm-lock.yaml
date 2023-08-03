@@ -41,7 +41,7 @@ devDependencies:
     specifier: ^1.3.3
     version: 1.3.3
   typescript:
-    specifier: ^5.0.4
+    specifier: ^5.1.6
     version: 5.1.6
   unified:
     specifier: ^10.1.2
