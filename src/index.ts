@@ -1,7 +1,6 @@
-import type { Element, Root } from 'hast'
 import type { Plugin, VFileWithOutput } from 'unified'
 
-import { toString as hastToString } from 'hast-util-to-string'
+import { type Root, toString as hastToString } from 'hast-util-to-string'
 import { EXIT, visit } from 'unist-util-visit'
 
 export interface RehypeExtractExcerptOptions {
@@ -54,7 +53,7 @@ const rehypeExtractExcerpt: Plugin<[RehypeExtractExcerptOptions?], Root, void> =
     return (tree: Root, vfile: VFileWithOutput<unknown>) => {
       const excerpt: string[] = []
 
-      visit(tree, 'element', (node: Element) => {
+      visit(tree, 'element', (node) => {
         if (node.tagName !== options.tagName) {
           return
         }
