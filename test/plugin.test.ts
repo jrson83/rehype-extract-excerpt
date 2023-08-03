@@ -2,14 +2,14 @@ import type { RehypeExtractExcerptOptions } from '../src'
 
 import { expect, it } from 'vitest'
 
-import { resolve } from 'path'
 import { promises as fs } from 'fs'
+import { resolve } from 'path'
 
-import { unified } from 'unified'
+import rehypeExtractExcerpt from '../src'
+import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
-import rehypeExtractExcerpt from '../src'
+import { unified } from 'unified'
 
 const cwd = process.cwd()
 const path = (file: string) => resolve(cwd, 'test', 'markdown', file)
@@ -111,7 +111,7 @@ it('should attach excerpt to vfile.data.excerpt without truncating word boundari
 it('should attach excerpt to vfile.data.excerpt without truncating word boundaries and without ellipsis', async () => {
   const { data } = await createProcessor({
     ellipsis: '',
-    wordBoundaries: false
+    wordBoundaries: false,
   }).process(await fs.readFile(path('markdown.md'), { encoding: 'utf8' }))
 
   expect(data).toMatchInlineSnapshot(`

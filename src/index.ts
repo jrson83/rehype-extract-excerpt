@@ -1,7 +1,7 @@
-import type { Plugin, VFileWithOutput } from 'unified'
 import type { Element, Root } from 'hast'
+import type { Plugin, VFileWithOutput } from 'unified'
 
-import { toString } from 'hast-util-to-string'
+import { toString as hastToString } from 'hast-util-to-string'
 import { EXIT, visit } from 'unist-util-visit'
 
 export interface RehypeExtractExcerptOptions {
@@ -26,53 +26,53 @@ const defaults: RehypeExtractExcerptOptions = {
   maxLength: 140,
   ellipsis: '...',
   wordBoundaries: true,
-  tagName: 'p'
+  tagName: 'p',
 }
 
-const rehypeExtractExcerpt: Plugin<
-  [RehypeExtractExcerptOptions?],
-  Root,
-  void
-> = (userOptions?: RehypeExtractExcerptOptions) => {
-  const options = { ...defaults, ...userOptions }
+const rehypeExtractExcerpt: Plugin<[RehypeExtractExcerptOptions?], Root, void> =
+  (userOptions?: RehypeExtractExcerptOptions) => {
+    const options = { ...defaults, ...userOptions }
 
-  function truncateExcerpt(
-    str: string,
-    maxLength: number,
-    ellipsis: string,
-    wordBoundaries: boolean
-  ): string {
-    if (str.length > maxLength) {
-      if (wordBoundaries) {
-        return `${str.slice(0, str.lastIndexOf(' ', maxLength - 1))}${ellipsis}`
+    function truncateExcerpt(
+      str: string,
+      maxLength: number,
+      ellipsis: string,
+      wordBoundaries: boolean
+    ): string {
+      if (str.length > maxLength) {
+        if (wordBoundaries) {
+          return `${str.slice(
+            0,
+            str.lastIndexOf(' ', maxLength - 1)
+          )}${ellipsis}`
+        }
+        return `${str.slice(0, maxLength)}${ellipsis}`
       }
-      return `${str.slice(0, maxLength)}${ellipsis}`
+      return str
     }
-    return str
-  }
 
-  return (tree: Root, vfile: VFileWithOutput<unknown>) => {
-    const excerpt: string[] = []
+    return (tree: Root, vfile: VFileWithOutput<unknown>) => {
+      const excerpt: string[] = []
 
-    visit(tree, 'element', (node: Element) => {
-      if (node.tagName !== options.tagName) {
-        return
-      }
+      visit(tree, 'element', (node: Element) => {
+        if (node.tagName !== options.tagName) {
+          return
+        }
 
-      excerpt.push(
-        truncateExcerpt(
-          toString(node),
-          options.maxLength!,
-          options.ellipsis!,
-          options.wordBoundaries!
+        excerpt.push(
+          truncateExcerpt(
+            hastToString(node),
+            options.maxLength!,
+            options.ellipsis!,
+            options.wordBoundaries!
+          )
         )
-      )
 
-      return EXIT
-    })
+        return EXIT
+      })
 
-    vfile.data[options.name!] = excerpt[0]
+      vfile.data[options.name!] = excerpt[0]
+    }
   }
-}
 
 export default rehypeExtractExcerpt
