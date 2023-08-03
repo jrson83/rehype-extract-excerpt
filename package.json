@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@types/hast": "^2.3.4",
-    "@types/node": "^20.1.0",
+    "@types/node": "^20.4.6",
     "husky": "^8.0.3",
     "nano-staged": "^0.8.0",
     "rehype-stringify": "^9.0.3",
