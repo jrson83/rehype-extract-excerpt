@@ -45,7 +45,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "hast-util-to-string": "^2.0.0",
+    "hast-util-to-string": "^3.0.0",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
