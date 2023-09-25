@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^5.1.6
     version: 5.2.2
   unified:
-    specifier: ^10.1.2
-    version: 10.1.2
+    specifier: ^11.0.0
+    version: 11.0.3
   vitest:
     specifier: ^0.34.1
     version: 0.34.4
