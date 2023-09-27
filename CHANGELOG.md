@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2023-05-08
+
+### Features
+
+- Add tagName option for HTML tag to extract excerpt ([ce16f40]( https://github.com/jrson83/rehype-extract-excerpt/commit/ce16f40fcd09abb0b34a1c3f0b40db93ea30399f ))
+
 ## [0.1.3] - 2023-08-04
 
 ### Bug Fixes

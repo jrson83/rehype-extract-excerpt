@@ -1,6 +1,6 @@
 {
   "name": "rehype-extract-excerpt",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "rehype plugin which attaches a document's first paragraph to the VFile",
   "keywords": [
     "ast",
