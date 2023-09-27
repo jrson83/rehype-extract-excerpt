@@ -5,11 +5,11 @@ import { expect, it } from 'vitest'
 import { promises as fs } from 'fs'
 import { resolve } from 'path'
 
-import rehypeExtractExcerpt from '../src'
 import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
+import rehypeExtractExcerpt from '../src'
 
 const cwd = process.cwd()
 const path = (file: string) => resolve(cwd, 'test', 'markdown', file)

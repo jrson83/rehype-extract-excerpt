@@ -31,11 +31,12 @@
       "description": "Automatically merge devDependencies updates",
       "matchDepTypes": ["devDependencies"],
       "matchPackagePatterns": [
+        "@biomejs/biome",
         "@types/node",
         "husky",
         "nano-staged",
-        "rome",
         "sparkee",
+        "typescript",
         "vitest"
       ],
       "automerge": true

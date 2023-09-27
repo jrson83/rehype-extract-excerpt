@@ -1,12 +1,12 @@
 {
-  "$schema": "./node_modules/rome/configuration_schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
     "indentSize": 2,
     "indentStyle": "space",
     "lineWidth": 80,
-    "ignore": ["dist", "public", "node_modules"]
+    "ignore": ["dist", "node_modules"]
   },
   "javascript": {
     "formatter": {
@@ -18,18 +18,21 @@
   },
   "linter": {
     "enabled": true,
-    "ignore": ["dist", "public", "node_modules"],
+    "ignore": ["dist", "node_modules"],
     "rules": {
       "recommended": true,
       "a11y": {
         "useKeyWithClickEvents": "off"
       },
+      "correctness": {
+        "noVoidTypeReturn": "off"
+      },
+      "nursery": {
+        "useGroupedTypeImport": "error"
+      },
       "suspicious": {
         "noExplicitAny": "off",
         "noArrayIndexKey": "off"
-      },
-      "correctness": {
-        "noVoidTypeReturn": "off"
       },
       "style": {
         "all": false
