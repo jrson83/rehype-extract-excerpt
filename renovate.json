@@ -35,7 +35,6 @@
         "@types/node",
         "husky",
         "nano-staged",
-        "sparkee",
         "typescript",
         "vitest"
       ],
