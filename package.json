@@ -71,5 +71,5 @@
     "*.ts": "biome check --apply-unsafe .",
     "*": "biome format . --write"
   },
-  "packageManager": "pnpm@8.11.0"
+  "packageManager": "pnpm@8.12.0"
 }
