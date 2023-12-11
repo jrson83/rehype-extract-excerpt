@@ -59,7 +59,7 @@
     "remark-rehype": "^11.0.0",
     "typescript": "^5.2.2",
     "unified": "^11.0.3",
-    "vitest": "^0.34.5"
+    "vitest": "^1.0.0"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
