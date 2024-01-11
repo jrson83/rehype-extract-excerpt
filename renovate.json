@@ -35,8 +35,8 @@
         "@types/node",
         "husky",
         "nano-staged",
-        "typescript",
-        "vitest"
+        "tsx",
+        "typescript"
       ],
       "automerge": true
     }

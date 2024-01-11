@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2024-01-11
+
+### Features
+
+- Add named export (in addition to default)
+
+### Bug Fixes
+
+- Fix published package contains only source (closes #81)
+
+### Build
+
+- Update renovate config
+- Update biome config
+- Update dependency @types/node to v20.10.8
+- Update dependency @biomejs/biome to v1.5.1
+
+### Tests
+
+- Replace vitest with native node.js test runner
+
 ## [0.3.0] - 2023-09-27
 
 ### Bug Fixes

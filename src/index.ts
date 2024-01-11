@@ -72,4 +72,5 @@ const rehypeExtractExcerpt: Plugin<[RehypeExtractExcerptOptions?], Root> = (
   }
 }
 
+export { rehypeExtractExcerpt }
 export default rehypeExtractExcerpt

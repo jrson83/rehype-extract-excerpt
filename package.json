@@ -28,23 +28,17 @@
     "types": "./dist/index.d.ts",
     "import": "./dist/index.js"
   },
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "clean": "rm -rf dist",
     "lint": "biome check --apply-unsafe .",
     "fmt": "biome format . --write",
+    "dev": "tsc --watch",
     "build": "tsc",
-    "watch": "tsc --watch",
-    "type:check": "tsc --noEmit",
-    "test": "vitest",
-    "test:run": "vitest run",
-    "coverage": "vitest run --coverage",
+    "test": "node --import=tsx/esm --test ./test/plugin.test.ts",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -60,12 +54,9 @@
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.0.0",
+    "tsx": "^4.7.0",
     "typescript": "^5.2.2",
-    "unified": "^11.0.3",
-    "vitest": "^1.0.0"
-  },
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "unified": "^11.0.3"
   },
   "publishConfig": {
     "access": "public"
