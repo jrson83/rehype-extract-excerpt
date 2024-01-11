@@ -34,7 +34,7 @@ This plugin is useful if you want to use the first paragraph of a markdown file 
 ## Install
 
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
-In Node.js (version 12.20+, 14.14+, 16.0+, or 18.0+), install with [npm](https://docs.npmjs.com/cli/install):
+In Node.js (version 16.0+, or 18.0+), install with [npm](https://docs.npmjs.com/cli/install):
 
 ```shell
 npm install rehype-extract-excerpt
