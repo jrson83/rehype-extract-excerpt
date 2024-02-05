@@ -20,7 +20,7 @@ devDependencies:
     specifier: ^3.0.1
     version: 3.0.4
   '@types/node':
-    specifier: ^20.10.8
+    specifier: ^20.11.16
     version: 20.11.16
   husky:
     specifier: ^9.0.10

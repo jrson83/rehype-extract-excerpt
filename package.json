@@ -48,7 +48,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
     "@types/hast": "^3.0.1",
-    "@types/node": "^20.10.8",
+    "@types/node": "^20.11.16",
     "husky": "^9.0.10",
     "nano-staged": "^0.8.0",
     "rehype-stringify": "^10.0.0",
