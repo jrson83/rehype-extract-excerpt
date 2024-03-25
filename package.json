@@ -54,7 +54,7 @@
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.0.0",
-    "tsx": "^4.7.0",
+    "tsx": "^4.7.1",
     "typescript": "^5.4.3",
     "unified": "^11.0.3"
   },
@@ -64,6 +64,5 @@
   "nano-staged": {
     "*.ts": "biome check --apply-unsafe .",
     "*": "biome format . --write"
-  },
-  "packageManager": "pnpm@8.15.4"
+  }
 }
