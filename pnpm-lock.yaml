@@ -17,13 +17,13 @@ devDependencies:
     specifier: ^1.6.2
     version: 1.6.2
   '@types/hast':
-    specifier: ^3.0.1
+    specifier: ^3.0.4
     version: 3.0.4
   '@types/node':
     specifier: ^20.11.30
     version: 20.11.30
   husky:
-    specifier: ^9.0.10
+    specifier: ^9.0.11
     version: 9.0.11
   nano-staged:
     specifier: ^0.8.0
@@ -44,7 +44,7 @@ devDependencies:
     specifier: ^5.4.3
     version: 5.4.3
   unified:
-    specifier: ^11.0.3
+    specifier: ^11.0.4
     version: 11.0.4
 
 packages:

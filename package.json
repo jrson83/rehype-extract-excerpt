@@ -39,6 +39,7 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "test": "node --import=tsx/esm --test ./test/plugin.test.ts",
+    "quality-check": "pnpm lint && pnpm fmt && pnpm build && pnpm test",
     "prepare": "husky"
   },
   "dependencies": {
@@ -47,16 +48,16 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.6.2",
-    "@types/hast": "^3.0.1",
+    "@types/hast": "^3.0.4",
     "@types/node": "^20.11.30",
-    "husky": "^9.0.10",
+    "husky": "^9.0.11",
     "nano-staged": "^0.8.0",
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.0.0",
     "tsx": "^4.7.1",
     "typescript": "^5.4.3",
-    "unified": "^11.0.3"
+    "unified": "^11.0.4"
   },
   "publishConfig": {
     "access": "public"
