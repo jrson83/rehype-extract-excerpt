@@ -14,10 +14,12 @@
 
     "strict": true,
     "esModuleInterop": true,
-    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
+    "exactOptionalPropertyTypes": true
   },
   "include": ["src/index.ts"],
   "exclude": ["**/node_modules", "**/.*/"]
