@@ -14,7 +14,7 @@ dependencies:
 
 devDependencies:
   '@biomejs/biome':
-    specifier: ^1.5.3
+    specifier: ^1.6.2
     version: 1.6.2
   '@types/hast':
     specifier: ^3.0.1
