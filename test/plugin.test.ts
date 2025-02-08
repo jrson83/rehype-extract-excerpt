@@ -1,17 +1,14 @@
-import type { RehypeExtractExcerptOptions } from '../src'
+import rehypeExtractExcerpt, { type RehypeExtractExcerptOptions } from '../src'
 
 import { deepStrictEqual } from 'node:assert/strict'
-import { describe, it } from 'node:test'
-
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
+import { describe, it } from 'node:test'
 
 import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
-
-import rehypeExtractExcerpt from '../src'
 
 const cwd = process.cwd()
 const path = (file: string) => resolve(cwd, 'test', 'markdown', file)
