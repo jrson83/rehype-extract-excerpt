@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.1] - 2024-01-11
+## 0.3.1 - 2024-01-11
 
 ### Features
 
@@ -23,7 +23,7 @@ All notable changes to this project will be documented in this file.
 
 - Replace vitest with native node.js test runner
 
-## [0.3.0] - 2023-09-27
+## 0.3.0] - 2023-09-27
 
 ### Bug Fixes
 
@@ -45,13 +45,13 @@ All notable changes to this project will be documented in this file.
 - Update actions/checkout action to v4.1.0 ([5d9cacc]( https://github.com/jrson83/rehype-extract-excerpt/commit/5d9cacc847cc0b4bad6a1089da74726c34331e20 ))
 - Update dependency remark-rehype to v11 ([a290889]( https://github.com/jrson83/rehype-extract-excerpt/commit/a290889f81014581fdc80503e9fe1487791c02c2 ))
 
-## [0.2.0] - 2023-05-08
+## 0.2.0 - 2023-05-08
 
 ### Features
 
 - Add tagName option for HTML tag to extract excerpt ([ce16f40]( https://github.com/jrson83/rehype-extract-excerpt/commit/ce16f40fcd09abb0b34a1c3f0b40db93ea30399f ))
 
-## [0.1.3] - 2023-08-04
+## 0.1.3 - 2023-08-04
 
 ### Bug Fixes
 
@@ -66,7 +66,7 @@ All notable changes to this project will be documented in this file.
 
 - Update actions/setup-node action to v3.7.0 ([7f16896]( https://github.com/jrson83/rehype-extract-excerpt/commit/7f16896ef16c8cb66faf2e1c54fff55b2c613e69 ))
 
-## [0.1.2] - 2023-04-10
+## 0.1.2 - 2023-04-10
 
 ### Bug Fixes
 
@@ -86,7 +86,7 @@ All notable changes to this project will be documented in this file.
 - Update dependencies ([0de6826]( https://github.com/jrson83/rehype-extract-excerpt/commit/0de6826080c5364f13f44cc3ec3f8928c9645f33 ))
 - Add sparkee ([27fcfe3]( https://github.com/jrson83/rehype-extract-excerpt/commit/27fcfe3a1c52d4b09c253646c8f49cac03b5ea1f ))
 
-## [0.1.1] - 2023-01-28
+## 0.1.1 - 2023-01-28
 
 ### Features
 
@@ -99,6 +99,6 @@ All notable changes to this project will be documented in this file.
 - **deps:** update dependencies: `unist-util-visit`
 - **deps:** update devDependencies: `@types/node`, `husky`, `prettier`, `typescript`
 
-## [0.1.0] - 2022-07-27
+## 0.1.0 - 2022-07-27
 
 - initial release
