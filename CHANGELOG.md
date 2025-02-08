@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.4.0 - 2025-02-08
+
+### Bug Fixes
+
+- Add default export to package.json ([76f4862](https://github.com/jrson83/rehype-extract-excerpt/commit/76f486202a704a0c57fd4ef9da34e6ea23634088))
+
+### Build
+
+- Update dependency hast-util-to-string to ^3.0.1 ([001d730](https://github.com/jrson83/rehype-extract-excerpt/commit/001d730b97fe3a170154f85f876519e10d72c92f))
+
 ## 0.3.1 - 2024-01-11
 
 ### Features
@@ -10,7 +20,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-- Fix published package contains only source (closes #81)
+- Fix published package contains only source
 
 ### Build
 
@@ -23,11 +33,11 @@ All notable changes to this project will be documented in this file.
 
 - Replace vitest with native node.js test runner
 
-## 0.3.0] - 2023-09-27
+## 0.3.0 - 2023-09-27
 
 ### Bug Fixes
 
-- Bump unist-util-visit from 4.1.2 to 5.0.0 (#34) ([dccfdac]( https://github.com/jrson83/rehype-extract-excerpt/commit/dccfdac9950ee9c5158d1795530102569c7ca97f ))
+- Bump unist-util-visit from 4.1.2 to 5.0.0 ([dccfdac]( https://github.com/jrson83/rehype-extract-excerpt/commit/dccfdac9950ee9c5158d1795530102569c7ca97f ))
 - Fix node types ([6609463]( https://github.com/jrson83/rehype-extract-excerpt/commit/6609463645217c81e7720d5b8e16021011e184cb ))
 - Types, release, version, tags ([2eb9961]( https://github.com/jrson83/rehype-extract-excerpt/commit/2eb99611f5305f4543f0983b9ba609bff44990c3 ))
 - Update node-ci ([062a04f]( https://github.com/jrson83/rehype-extract-excerpt/commit/062a04fc9635110e639dcb79dff9585032ab5724 ))
