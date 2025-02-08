@@ -44,7 +44,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "hast-util-to-string": "^3.0.0",
+    "hast-util-to-string": "^3.0.1",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {

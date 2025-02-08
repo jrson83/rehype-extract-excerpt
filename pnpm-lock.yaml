@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       hast-util-to-string:
-        specifier: ^3.0.0
+        specifier: ^3.0.1
         version: 3.0.1
       unist-util-visit:
         specifier: ^5.0.0
