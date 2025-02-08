@@ -3,7 +3,7 @@ import type { RehypeExtractExcerptOptions } from '../src'
 import { deepStrictEqual } from 'node:assert/strict'
 import { describe, it } from 'node:test'
 
-import { promises as fs } from 'node:fs'
+import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
 import rehypeStringify from 'rehype-stringify'
@@ -26,10 +26,10 @@ function createProcessor(options?: RehypeExtractExcerptOptions) {
   return processor
 }
 
-describe('colorize test', () => {
+describe('plugin test', () => {
   it('should attach excerpt to vfile.data.excerpt with default options', async () => {
     const { data } = await createProcessor().process(
-      await fs.readFile(path('markdown.md'), { encoding: 'utf8' })
+      await readFile(path('markdown.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
@@ -40,7 +40,7 @@ describe('colorize test', () => {
 
   it('should attach excerpt to vfile.data.excerpt without truncating', async () => {
     const { data } = await createProcessor().process(
-      await fs.readFile(path('short.md'), { encoding: 'utf8' })
+      await readFile(path('short.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
@@ -50,7 +50,7 @@ describe('colorize test', () => {
 
   it('should attach `undefined` excerpt to vfile.data.excerpt', async () => {
     const { data } = await createProcessor().process(
-      await fs.readFile(path('empty.md'), { encoding: 'utf8' })
+      await readFile(path('empty.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
@@ -60,7 +60,7 @@ describe('colorize test', () => {
 
   it('should attach excerpt to vfile.data.excerpt with custom maxLength', async () => {
     const { data } = await createProcessor({ maxLength: 20 }).process(
-      await fs.readFile(path('markdown.md'), { encoding: 'utf8' })
+      await readFile(path('markdown.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
@@ -70,7 +70,7 @@ describe('colorize test', () => {
 
   it('should attach excerpt to vfile.data.customExcerpt', async () => {
     const { data } = await createProcessor({ name: 'customExcerpt' }).process(
-      await fs.readFile(path('markdown.md'), { encoding: 'utf8' })
+      await readFile(path('markdown.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
@@ -81,7 +81,7 @@ describe('colorize test', () => {
 
   it('should attach excerpt to vfile.data.excerpt with custom ellipsis', async () => {
     const { data } = await createProcessor({ ellipsis: '---' }).process(
-      await fs.readFile(path('markdown.md'), { encoding: 'utf8' })
+      await readFile(path('markdown.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
@@ -92,7 +92,7 @@ describe('colorize test', () => {
 
   it('should attach excerpt to vfile.data.excerpt without truncating word boundaries', async () => {
     const { data } = await createProcessor({ wordBoundaries: false }).process(
-      await fs.readFile(path('markdown.md'), { encoding: 'utf8' })
+      await readFile(path('markdown.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
@@ -105,7 +105,7 @@ describe('colorize test', () => {
     const { data } = await createProcessor({
       ellipsis: '',
       wordBoundaries: false,
-    }).process(await fs.readFile(path('markdown.md'), { encoding: 'utf8' }))
+    }).process(await readFile(path('markdown.md'), { encoding: 'utf8' }))
 
     deepStrictEqual(data, {
       excerpt:
@@ -115,7 +115,7 @@ describe('colorize test', () => {
 
   it('should extract excerpt from a custom HTML tag', async () => {
     const { data } = await createProcessor({ tagName: 'h1' }).process(
-      await fs.readFile(path('markdown.md'), { encoding: 'utf8' })
+      await readFile(path('markdown.md'), { encoding: 'utf8' })
     )
 
     deepStrictEqual(data, {
