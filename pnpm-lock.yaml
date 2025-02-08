@@ -46,7 +46,7 @@ importers:
         specifier: ^5.4.3
         version: 5.7.3
       unified:
-        specifier: ^11.0.4
+        specifier: ^11.0.5
         version: 11.0.5
 
 packages:
