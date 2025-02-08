@@ -16,7 +16,7 @@ importers:
         version: 5.0.0
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.6.2
+        specifier: ^1.9.4
         version: 1.9.4
       '@types/hast':
         specifier: ^3.0.4
