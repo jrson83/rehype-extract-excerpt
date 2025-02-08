@@ -35,7 +35,7 @@
   "files": ["dist"],
   "scripts": {
     "clean": "rm -rf dist",
-    "lint": "biome check --apply-unsafe .",
+    "lint": "biome lint --write .",
     "fmt": "biome format . --write",
     "dev": "tsc --watch",
     "build": "tsc",
@@ -64,7 +64,7 @@
     "access": "public"
   },
   "nano-staged": {
-    "*.ts": "biome check --apply-unsafe .",
+    "*.ts": "biome lint --write .",
     "*": "biome format . --write"
   }
 }
