@@ -50,7 +50,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.1.2",
     "@types/hast": "^3.0.4",
-    "@types/node": "^22.16.3",
+    "@types/node": "^22.16.5",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "rehype-stringify": "^10.0.1",
