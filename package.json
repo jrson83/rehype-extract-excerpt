@@ -48,7 +48,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.11",
+    "@biomejs/biome": "^2.3.12",
     "@types/hast": "^3.0.4",
     "@types/node": "^24.10.9",
     "husky": "^9.1.7",
