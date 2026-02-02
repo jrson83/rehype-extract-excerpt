@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "hast-util-to-string": "^3.0.1",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.13",
